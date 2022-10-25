@@ -1,23 +1,40 @@
 .user__info {
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: var(--rounded);
   background-color: var(--bg-secondary);
 
   .user__details {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-template-rows: 1fr minmax(min-content, max-content);
+    display: flex;
     align-items: center;
-    justify-items: center;
 
-    &--desc {
-      grid-column: 2 / 4;
+    &--avatar {
+      margin-right: 2rem;
+
+      img {
+        width: 7rem;
+      }
     }
 
-    p {
+    &--desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .user__nickname {
+        color: var(--sky-blue);
+      }
+    }
+
+    .user__motto {
       grid-row: 2;
       grid-column: 1/-1;
       margin: 1rem 0;
     }
   }
+
+  .user__motto {
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+  }
 }
+

@@ -3,6 +3,8 @@
 
 @use './components/main' as *;
 
+@use './layout/main' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 html {

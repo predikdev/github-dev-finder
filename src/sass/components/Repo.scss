@@ -1,0 +1,43 @@
+.repos__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .repo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background-color: var(--bg-secondary);
+    border-radius: var(--rounded);
+
+    &__details {
+      flex: 2;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+    }
+    p {
+      font-size: 1rem;
+      max-width: 25ch;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}
+
+@media screen and (min-width: 564px) {
+  .repos__list {
+    .repo {
+      p {
+        font-size: 1rem;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
