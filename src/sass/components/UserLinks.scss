@@ -1,0 +1,16 @@
+.user__links {
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user__link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-size: 14px;
+
+  svg {
+    margin-right: 0.5rem;
+  }
+}

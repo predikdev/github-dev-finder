@@ -1,0 +1,22 @@
+.searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-secondary);
+  margin-bottom: 2rem;
+
+  &__form {
+    background-color: transparent;
+
+    input[type='text'] {
+      font-size: 0.875rem;
+      background-color: transparent;
+      color: var(--text-main);
+      border: none;
+      outline: none;
+    }
+  }
+}
+
