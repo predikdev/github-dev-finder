@@ -9,8 +9,11 @@
 
   &__form {
     background-color: transparent;
+    flex: 2;
+    margin-right: 2rem;
 
     input[type='text'] {
+      width: 100%;
       font-size: 0.875rem;
       background-color: transparent;
       color: var(--text-main);

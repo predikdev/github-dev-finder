@@ -24,15 +24,9 @@
         color: var(--sky-blue);
       }
     }
-
-    .user__motto {
-      grid-row: 2;
-      grid-column: 1/-1;
-      margin: 1rem 0;
-    }
   }
 
-  .user__motto {
+  .user__bio {
     margin: 1rem 0;
     padding: 0.5rem 0;
   }
