@@ -25,7 +25,7 @@ async function getUserData(input) {
 async function getRepoData(input) {
   const username = input.value;
 
-  const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=5`);
+  const res = await fetch(`https://api.github.com/users/${username}/repos`);
   const results = await res.json();
 
   if (!res.ok) {
