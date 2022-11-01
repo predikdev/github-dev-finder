@@ -116,8 +116,9 @@ async function renderRepoData() {
 
   const reposList = document.querySelector('.repos__list');
 
-  const showRepos = data.map((repo) => {
-    return `
+  const showRepos = data
+    .map((repo) => {
+      return `
     <div class="repos__list--repo | repo">
       <div class="repo__details">
         <h2 class="repo__details--name">${repo.name}</h2>
@@ -142,7 +143,8 @@ async function renderRepoData() {
         </a>
       </div>
     </div> `;
-  });
+    })
+    .join('');
 
   reposList.innerHTML = showRepos;
 }
