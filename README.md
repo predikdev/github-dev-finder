@@ -22,8 +22,6 @@ I made this small application as a practice project to develop my knowledge how 
 
 ## My process
 
----
-
 ### What I used
 
 - Semantic HTML markup
