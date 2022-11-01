@@ -1,0 +1,31 @@
+.container {
+  padding: 1rem;
+}
+
+.btn {
+  width: max-content;
+  font-size: 1rem;
+  color: var(--text-main);
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--rounded-sm);
+  background-color: var(--sky-blue);
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.count {
+  font-weight: 500;
+}
+
+@media screen and (min-width: 564px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+

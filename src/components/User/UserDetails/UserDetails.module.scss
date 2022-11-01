@@ -1,0 +1,28 @@
+.user__details {
+  display: flex;
+  align-items: center;
+
+  .user__avatar {
+    margin-right: 2rem;
+
+    img {
+      width: 7rem;
+    }
+  }
+
+  .user__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .user__nickname {
+      color: var(--sky-blue);
+    }
+  }
+}
+
+.user__bio {
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+}
+

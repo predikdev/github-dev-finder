@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    font-size: var(--font-15);
+  }
+
+  &__switch {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}

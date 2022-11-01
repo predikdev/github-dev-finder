@@ -1,0 +1,18 @@
+.repositories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .btn {
+    margin: 1rem 0;
+  }
+
+  .repos__list {
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .repos__list.open {
+    max-height: 1080px;
+  }
+}
