@@ -1,26 +1,27 @@
 import React from 'react';
-
-import Avatar from '../../../assets/avatar.jpg';
+import moment from 'moment';
 
 import styles from './UserDetails.module.scss';
 
-const UserInfo = () => {
+const UserInfo = ({ userData }) => {
+  const joined = userData.created_at;
+  const date = moment(joined).utc().format('ll');
+
   return (
     <>
-      <div className={styles.user__details}>
-        <div className={styles.user__avatar}>
-          <img src={Avatar} alt="User avatar" className="avatar" />
+      {userData.id && (
+        <div className={styles.user__details}>
+          <div className={styles.user__avatar}>
+            <img src={userData.avatar_url} alt="User avatar" className="avatar" />
+          </div>
+          <div className={styles.user__desc}>
+            <h1 className={styles.user__name}>{userData.name}</h1>
+            <p className={styles.user__nickname}>@{userData.login}</p>
+            <p className={styles.user__joined}>{'Joined: ' + date}</p>
+          </div>
         </div>
-        <div className={styles.user__desc}>
-          <h1 className={styles.user__name}>Lukas Pscheidt</h1>
-          <p className={styles.user__nickname}>@predikdev</p>
-          <p className={styles.user__joined}>Joined: Jun 27, 2019</p>
-        </div>
-      </div>
-      <p className={styles.user__bio}>
-        I am self-taught Front End Web Developer. I am using HTML, CSS and JavaScript for now, but I will learn more in
-        the future!!!
-      </p>
+      )}
+      {userData.bio && <p className={styles.user__bio}>{userData.bio}</p>}
     </>
   );
 };

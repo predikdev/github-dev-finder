@@ -6,12 +6,12 @@ import UserLinks from './UserLinks/UserLinks';
 
 import styles from './UserInfo.module.scss';
 
-const UserInfo = () => {
+const UserInfo = ({ userData, repoData }) => {
   return (
     <section className={styles.user__info}>
-      <UserDetails />
-      <UserStats />
-      <UserLinks />
+      <UserDetails userData={userData} />
+      <UserStats userData={userData} />
+      <UserLinks userData={userData} />
     </section>
   );
 };
