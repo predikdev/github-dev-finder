@@ -4,21 +4,19 @@ import styles from './Searchbar.module.scss';
 
 const Searchbar = ({ getUserData, getRepoData }) => {
   const [userInput, setUserInput] = useState('');
-  const [userData, setUserData] = useState('');
-  const [userRepo, setUserRepo] = useState('');
+  const [userData, setUserData] = useState({});
+  const [userRepo, setUserRepo] = useState({});
 
   const fetchUser = async () => {
     const response = await fetch(`https://api.github.com/users/${userInput}`);
     const json = await response.json();
     setUserData(json);
-    console.log(json);
   };
 
   const fetchUserRepo = async () => {
     const response = await fetch(`https://api.github.com/users/${userInput}/repos`);
     const json = await response.json();
     setUserRepo(json);
-    console.log(json);
   };
 
   const fetchData = async (e) => {
@@ -30,7 +28,7 @@ const Searchbar = ({ getUserData, getRepoData }) => {
   useEffect(() => {
     getUserData(userData);
     getRepoData(userRepo);
-  }, [userData]);
+  }, [userData, userRepo]);
 
   return (
     <section className={styles.searchbar}>
