@@ -9,15 +9,28 @@ import UserInfo from './components/User/UserInfo';
 
 function App() {
   const [userData, setUserData] = useState({});
-  const [repoData, setRepoData] = useState('');
+  const [repoData, setRepoData] = useState({});
+
+  const getUserDataHandler = (userData) => {
+    setUserData(userData);
+  };
+
+  const getRepoDataHandler = (repoData) => {
+    setRepoData(repoData);
+  };
+
   return (
     <>
       <Header />
       <main className="container">
-        <Searchbar onSubmit={(userData) => setUserData(userData)} />
+        <Searchbar
+          // getUserData={(userData) => setUserData(userData)}
+          // getRepoData={(repoData) => setRepoData(repoData)}
+          getUserData={getUserDataHandler}
+          getRepoData={getRepoDataHandler}
+        />
         <UserInfo />
         <Repo />
-        <p>{userData.bio}</p>
       </main>
     </>
   );

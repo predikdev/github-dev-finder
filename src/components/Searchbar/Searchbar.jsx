@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import styles from './Searchbar.module.scss';
 
-const Searchbar = ({ onSubmit }) => {
+const Searchbar = ({ getUserData, getRepoData }) => {
   const [userInput, setUserInput] = useState('');
   const [userData, setUserData] = useState('');
   const [userRepo, setUserRepo] = useState('');
@@ -25,8 +25,12 @@ const Searchbar = ({ onSubmit }) => {
     e.preventDefault();
     fetchUser();
     fetchUserRepo();
-    onSubmit(userData);
   };
+
+  useEffect(() => {
+    getUserData(userData);
+    getRepoData(userRepo);
+  }, [userData]);
 
   return (
     <section className={styles.searchbar}>
