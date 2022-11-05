@@ -2,6 +2,11 @@
 
 I made this small application as a practice project to develop my knowledge how to work with API. I also practiced JavaScript, HTML and CSS skills. Design of this application comes from challenge on frontendmentor.io. In this challenge you will be provided with some starter materials, such as texts and images and then you have to do all the codework.
 
+## Links
+
+- Version 1 (Made with VanillaJS) - https://github-dev-finder.onrender.com
+- Version 2 (Made wtih React) - https://github-dev-finder-react.onrender.com/
+
 ## Objectives:
 
     - [x] User should view the optimal layout for the app depending on device's screen size
@@ -13,21 +18,24 @@ I made this small application as a practice project to develop my knowledge how 
 
 ## My personal objectives:
 
-    - [ ] Remake this app with React
+    - [x] Remake this app with React
     - [ ] Remake this app with Typescript instead of Javascript
 
-## Links
-
-- Version 1 (Vanilla Javascript) - https://github-dev-finder.onrender.com
 
 ## My process
 
 ### What I used
 
+#### Version 1:
+
 - Semantic HTML markup
 - CSS Grid
 - CSS Flexbox
 - Javascript
+
+#### Version 2
+- React
+- MomentJS
 
 ### What I learned
 
