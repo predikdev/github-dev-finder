@@ -23,14 +23,9 @@ function App() {
     <>
       <Header />
       <main className="container">
-        <Searchbar
-          // getUserData={(userData) => setUserData(userData)}
-          // getRepoData={(repoData) => setRepoData(repoData)}
-          getUserData={getUserDataHandler}
-          getRepoData={getRepoDataHandler}
-        />
-        <UserInfo />
-        <Repo />
+        <Searchbar getUserData={getUserDataHandler} getRepoData={getRepoDataHandler} />
+        <UserInfo userData={userData} />
+        <Repo repoData={repoData} />
       </main>
     </>
   );
