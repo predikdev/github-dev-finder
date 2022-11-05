@@ -1,14 +1,16 @@
 import React from 'react';
 
-import styles from './Repo.module.scss';
 import RepoList from './RepoList/RepoList';
 
-const Repo = () => {
+const Repo = ({ repoData }) => {
   return (
-    <section className={styles.repositories}>
-      <button className="btn">Show repositories</button>
-      {/* <RepoList /> */}
-    </section>
+    <>
+      {repoData.length && (
+        <section>
+          <RepoList repoData={repoData} />
+        </section>
+      )}
+    </>
   );
 };
 
